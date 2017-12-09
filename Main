@@ -1,0 +1,12 @@
+//note that the char array would be passed in from the create method along with the turns. This is just an example.
+
+public class Main {
+
+	public static void main(String[] args) {
+		char[][] array = {{'c', 'c', 'c', 'c'}, {'s', 's', 's', 'c'}, {'c', 's', 's', 'c'}, {'c', 's', 's', 'c'}};
+		int turns = 12;
+		Battleship.gamePlay(array, turns);
+
+	}
+
+}
