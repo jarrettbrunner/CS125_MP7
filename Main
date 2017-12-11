@@ -3,9 +3,12 @@
 public class Main {
 
 	public static void main(String[] args) {
-		char[][] array = {{'c', 'c', 'c', 'c'}, {'s', 's', 's', 'c'}, {'c', 's', 's', 'c'}, {'c', 's', 's', 'c'}};
-		int turns = 12;
-		Battleship.gamePlay(array, turns);
+		board.placeShip(2);
+		board.placeShip(3);
+		board.placeShip(3);
+		board.placeShip(4);
+		board.placeShip(5);
+		Battleship.gamePlay(board.getArray());
 
 	}
 
