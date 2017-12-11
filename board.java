@@ -12,6 +12,10 @@ public final class board {
 	{'s', 's', 's', 's', 's', 's', 's', 's', 's', 's',},
 	{'s', 's', 's', 's', 's', 's', 's', 's', 's', 's',}};
 	
+	public static char[][] getArray() {
+		return array;
+	}
+	
 	// Should place a ship horizontally on a 10x10 board
 	public static void placeShip(int length) {
 		
