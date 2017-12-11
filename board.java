@@ -24,7 +24,6 @@ public final class board {
 		return array;
 	}
 	
-	// Should place a ship horizontally on a 10x10 board
 	/**
 	 * This method creates ships.
 	 * @param length is the length of the ship
