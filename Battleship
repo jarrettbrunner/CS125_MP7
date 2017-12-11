@@ -5,13 +5,30 @@ import java.util.Scanner;
 
 public class Battleship {
 	
-	public static void gamePlay(char[][] board, int turns) {
-		//first we will create copyOfBoard which is the board that we will print,
-		//showing 'c' as 's' so that the player doesn't know where ships are.
+	public static void gamePlay(char[][] board) {
+		Scanner sc = new Scanner(System.in);
+		//we ask the user for how many turns they want (the fewer turns the greater the challenge)
+		int turns = 0;
+		while (true) {
+			System.out.println("How many turns would you like to play with?");
+			if (sc.hasNextInt()) {
+				turns = sc.nextInt();
+				if (turns >= 0 && turns < board.length * board.length) {
+				break;
+				} else {
+					System.out.println("This is an impossible number of turns.");
+				}
+			} else {
+				System.out.println("Invalid input. Please try again.");
+				sc.next();
+			}
+		}
 		System.out.println("On the board, 's' means that it is a sea space (or a hidden ship), and 'h' means that it is a hit");
 		System.out.println();
 		int xGuess;
 		int yGuess;
+		//first we will create copyOfBoard which is the board that we will print,
+		//showing 'c' as 's' so that the player doesn't know where ships are.
 		char[][] copyOfBoard = new char[board.length][board[0].length];
 		for (int i = 0; i < board.length; i++) {
 			for (int j = 0; j < board[0].length; j++) {
@@ -19,7 +36,6 @@ public class Battleship {
 			}
 		}
 		//now I open up a text reader in order to get the user's guess for the coordinates
-		Scanner sc = new Scanner(System.in);
 		while (turns > 0) {
 			while (true) {
 				while (true) {
