@@ -1,4 +1,9 @@
 import java.util.Arrays;
+/**
+ * 
+ * @author matthewwu
+ * This class creates the board.
+ */
 public final class board {
 	
 	public static char[][] array = {{'s', 's', 's', 's', 's', 's', 's', 's', 's', 's',},
@@ -11,12 +16,19 @@ public final class board {
 	{'s', 's', 's', 's', 's', 's', 's', 's', 's', 's',},
 	{'s', 's', 's', 's', 's', 's', 's', 's', 's', 's',},
 	{'s', 's', 's', 's', 's', 's', 's', 's', 's', 's',}};
-	
+	/**
+	 * 
+	 * @return the array to be used as a parameter for gameplay.
+	 */
 	public static char[][] getArray() {
 		return array;
 	}
 	
 	// Should place a ship horizontally on a 10x10 board
+	/**
+	 * This method creates ships.
+	 * @param length is the length of the ship
+	 */
 	public static void placeShip(int length) {
 		
 		if (length == 0) {
@@ -54,7 +66,10 @@ public final class board {
 		
 		return;
 	}
-	
+	/**
+	 * This just shows what an example board looks like. We don't actually use this.
+	 * @param agrs
+	 */
 	public static void main(String[] agrs) {
 		placeShip(2);
 		placeShip(3);
