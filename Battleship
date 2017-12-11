@@ -1,10 +1,18 @@
 
 import java.util.Scanner;
-
+/**
+ * 
+ * @author jarrettbrunner
+ * This class is for the gameplay.
+ */
 
 
 public class Battleship {
-	
+	/**
+	 * 
+	 * @param board is self-explanatory
+	 * This method performs all of the gameplay.
+	 */
 	public static void gamePlay(char[][] board) {
 		Scanner sc = new Scanner(System.in);
 		//we ask the user for how many turns they want (the fewer turns the greater the challenge)
