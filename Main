@@ -1,7 +1,14 @@
 //note that the char array would be passed in from the create method along with the turns. This is just an example.
-
+/**
+ * 
+ * @author jarrettbrunner
+ * This class performs the game by calling on the methods in other classes.
+ */
 public class Main {
-
+/**
+ * Where the magic happens.
+ * @param args
+ */
 	public static void main(String[] args) {
 		board.placeShip(2);
 		board.placeShip(3);
